@@ -1,0 +1,16 @@
+def on_button_pressed_a():
+    basic.show_number(0, 65)
+    servos.P0.set_angle(0)
+    basic.pause(500)
+    basic.show_number(90, 65)
+    servos.P0.set_angle(90)
+    basic.pause(500)
+    basic.show_number(180, 65)
+    servos.P0.set_angle(180)
+    basic.pause(500)
+    servos.P0.stop()
+    basic.show_icon(IconNames.ASLEEP)
+input.on_button_pressed(Button.A, on_button_pressed_a)
+
+basic.show_string("Servo",65)
+basic.show_icon(IconNames.HAPPY)
